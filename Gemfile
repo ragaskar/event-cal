@@ -23,7 +23,10 @@ end
 gem 'jquery-rails'
 
 group :test, :development do
+  gem 'rspec-rails'
   gem 'jasmine'
+  gem 'faker'
+  gem 'factory_girl'
 end
 
 # To use ActiveModel has_secure_password
@@ -39,4 +42,4 @@ end
 # gem 'capistrano'
 
 # To use debugger
-# gem 'debugger'
+gem 'debugger'
