@@ -1,0 +1,26 @@
+- content_for :nav do
+  %ul.nav
+    %li.free
+      = link_to "0", "#", {title: "Free"}
+    %li.cheap
+      = link_to "&cent;".html_safe, "#", {title: "Under $10"}
+    %li.over-ten
+      = link_to "$", "#", {title: "Over $10"}
+%ul.events.unstyled
+  - @events.group_by(&:day).each do |day, events|
+    %li.day_header
+      %h3= day
+    - events.each do |event|
+      %li.event.well{:class => event.price_class}
+        .header
+          %h2= event.name
+          .price
+            .label= event.price
+        .venue
+          %h4 #{event.venue_name}
+          %h5 #{event.time_info}
+        %address= event.venue_address
+        %p= event.description
+
+
+

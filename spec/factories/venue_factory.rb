@@ -15,6 +15,11 @@ FactoryGirl.define do
     "Hotel",
     "Concert Hall",
     "Drive-Thru",
+    "Crab Shak",
+    "Roadhouse",
+    "Automobile Dealership",
+    "High School",
+    "Church Basement"
   ]
   venue_adjectives = [
     "Spooky",
@@ -24,7 +29,10 @@ FactoryGirl.define do
     "Repulsive",
     "Strangely Silent",
     "Five Star",
-    "Critically Acclaimed"
+    "Critically Acclaimed",
+    "Regrettable",
+    "Rarely Seen",
+    "Provocative",
   ]
   streets  = [
     "Howard St",

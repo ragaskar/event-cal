@@ -15,7 +15,7 @@ FactoryGirl.define do
     "Record Store Employee",
     "East Bay Rats'",
     "Video Store Clerks'",
-    "Agroaphobiacs'",
+    "Agoraphobiacs'",
     "A True American",
   ]
   event_types = [
@@ -29,7 +29,7 @@ FactoryGirl.define do
     "BBQ Contest",
     "Breakdance Battle",
     "Triathalon",
-    "Firework Show",
+    "Fireworks Show",
     "Dog Parade",
     "Free For All",
     "Pig-Out",
@@ -39,17 +39,21 @@ FactoryGirl.define do
     "Art Opening",
     "Backyard Wrestling",
     "Fight Club",
-    "Flight Show",
+    "Air Show",
     "Drag Race",
     "Roller Derby",
     "Rave",
     "Beer Pong Tourney",
     "Movie Marathon",
+    "Magic Show",
+    "Slam Dunk Contest",
+    "Magic The Gathering Tournament",
   ]
   factory :event do
     name { event_genres.sample + " " + event_types.sample }
-    start_time { rand(7).days.from_now }
-    description { Faker::Company.catch_phrase }
+    start_time { Time.zone.now.beginning_of_day + 12.hours + rand(7).days + rand(12).hours }
+    end_time { start_time + rand(11).hours }
+    description { Faker::Lorem.sentences.join(' ') }
     venue
     price { rand(20) }
   end

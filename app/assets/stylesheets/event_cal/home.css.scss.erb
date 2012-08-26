@@ -1,0 +1,54 @@
+#body {
+  ul.events {
+    li.event {
+      .header {
+        display: table;
+        > h2 {
+          display: table-cell;
+          vertical-align: middle;
+        }
+        > .price {
+          display: table-cell;
+          vertical-align: middle;
+          padding-left: 20px;
+          > .label {
+            font-size: 14px;
+            padding: 8px;
+          }
+        }
+      }
+      .venue {
+        display: table;
+        > h4 {
+          display: table-cell;
+        }
+        > h5 {
+          display: table-cell;
+          padding-left: 10px;
+        }
+        margin-bottom: 5px;
+      }
+      &.free {
+        .price {
+          .label {
+            background-color: #00b25c;
+          }
+        }
+      }
+      &.cheap {
+        .price {
+          .label {
+            background-color: #0a6783;
+          }
+        }
+      }
+      &.over-ten {
+        .price {
+          .label {
+            background-color: #65a6d1;
+          }
+        }
+      }
+    }
+  }
+}
