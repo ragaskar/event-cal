@@ -1,11 +1,11 @@
 - content_for :nav do
-  %ul.nav
+  %ul.nav{:'data-behavior' => 'highlight_active list_filter', :"data-content-to-filter" => "ul.events"}
     %li.free
-      = link_to "0", "#", {title: "Free"}
+      = link_to "0", "#", {title: "Free", :"data-list-filter-show" => ".free"}
     %li.cheap
-      = link_to "&cent;".html_safe, "#", {title: "Under $10"}
-    %li.over-ten
-      = link_to "$", "#", {title: "Over $10"}
+      = link_to "&cent;".html_safe, "#", {title: "Under $10", :"data-list-filter-show" => ".free .cheap"}
+    %li.over-ten.active
+      = link_to "$", "#", {title: "Over $10", :"data-list-filter-show" => ".free .cheap .over-ten"}
 %ul.events.unstyled
   - @events.group_by(&:day).each do |day, events|
     %li.day_header

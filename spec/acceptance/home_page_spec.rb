@@ -7,21 +7,21 @@ describe "viewing the home page", type: :request do
     expensive_event = FactoryGirl.create(:event, price: 20, name: "Expensive Event")
     visit("/")
     within('.events') do
-      page.should have_content(free_event.name)
-      page.should have_content(cheap_event.name)
-      page.should have_content(expensive_event.name)
+      page.should have_css('li', :text => free_event.name, :visible => true)
+      page.should have_css('li', :text => cheap_event.name, :visible => true)
+      page.should have_css('li', :text => expensive_event.name, :visible => true)
     end
-    click_link("$")
+    click_link("Under $10")
     within('.events') do
-      page.should have_content(free_event.name)
-      page.should have_content(cheap_event.name)
-      page.should_not have_content(expensive_event.name)
+      page.should have_css('li', :text => free_event.name, :visible => true)
+      page.should have_css('li', :text => cheap_event.name, :visible => true)
+      page.should_not have_css('li', :text => expensive_event.name, :visible => true)
     end
     click_link("0")
     within('.events') do
-      page.should have_content(free_event.name)
-      page.should_not have_content(cheap_event.name)
-      page.should_not have_content(expensive_event.name)
+      page.should have_css('li', :text => free_event.name, :visible => true)
+      page.should_not have_css('li', :text => cheap_event.name, :visible => true)
+      page.should_not have_css('li', :text => expensive_event.name, :visible => true)
     end
   end
 end
