@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby "1.9.3"
 
 gem 'rails', '3.2.8'
 
@@ -6,7 +7,8 @@ gem 'rails', '3.2.8'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
-
+gem 'heroku'
+gem 'factory_girl'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -29,7 +31,6 @@ group :test, :development do
   gem 'rspec-rails'
   gem 'jasmine'
   gem 'faker'
-  gem 'factory_girl'
   gem 'capybara'
   gem 'database_cleaner'
 end
