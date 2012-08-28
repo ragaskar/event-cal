@@ -19,6 +19,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
   gem 'less'
+  gem 'hogan_assets'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby

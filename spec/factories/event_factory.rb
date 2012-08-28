@@ -28,7 +28,7 @@ FactoryGirl.define do
     "Pancake Breakfast",
     "BBQ Contest",
     "Breakdance Battle",
-    "Triathalon",
+    "Triathlon",
     "Fireworks Show",
     "Dog Parade",
     "Free For All",

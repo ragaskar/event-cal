@@ -1,0 +1,6 @@
+%li
+  %a.show-free Free
+%li
+  %a.show-cheap Cheap
+%li
+  %a.show-under-ten All Events

@@ -1,0 +1,9 @@
+%li.event.well{:class => "{{priceClass}}" }
+  .header
+    %h2 {{name}}
+    .price
+      .label {{price}}
+  .venue
+    %h4 {{event.venue_name}}
+  %address {{venue_address}}
+  %p {{description}}

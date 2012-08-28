@@ -12,6 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require underscore
+//= require backbone
+//= require hogan.js
 //= require twitter/bootstrap
+//= require event_cal/event_cal
 //= require_tree .
-//= require_tree ./event_cal
