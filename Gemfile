@@ -9,13 +9,14 @@ gem 'rails', '3.2.8'
 gem 'pg'
 gem 'heroku'
 gem 'factory_girl'
+gem 'haml'
+gem 'faker'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-  gem 'haml'
   gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
   gem 'less'
 
@@ -30,9 +31,9 @@ gem 'jquery-rails'
 group :test, :development do
   gem 'rspec-rails'
   gem 'jasmine'
-  gem 'faker'
   gem 'capybara'
   gem 'database_cleaner'
+  gem 'debugger'
 end
 
 # To use ActiveModel has_secure_password
@@ -48,4 +49,3 @@ end
 # gem 'capistrano'
 
 # To use debugger
-gem 'debugger'
